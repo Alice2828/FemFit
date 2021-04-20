@@ -7,8 +7,7 @@
 //
 
 import UIKit
-//let session = URLSession.shared
-//let url = URL(string: "https://wger.de/api/v2/login")!
+let urlString = URL(string: "https://wger.de/api/v2/login/")
 class ViewController: UIViewController {
     
     @IBOutlet weak var passwordTF: UITextField!
@@ -19,14 +18,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func logIn(_ sender: UIButton) {
+        //get login and password from textfields
         let login = loginTF.text
         let password = passwordTF.text
         
-        guard let url = URL(string:  "https://wger.de/api/v2/login/") else {return}
-        
+        guard let url = urlString else {return}
+        //create json body
         var json = [String:Any]()
         json["username"] = login
         json["password"] = password
+        //try make post request
         do {
             let data = try JSONSerialization.data(withJSONObject: json, options: [])
             
