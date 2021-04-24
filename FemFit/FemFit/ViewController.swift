@@ -7,7 +7,7 @@
 //
 
 import UIKit
-let urlString = URL(string: "https://wger.de/api/v2/login/")
+let urlString = "https://wger.de/api/v2/"
 class ViewController: UIViewController {
     
     @IBOutlet weak var passwordTF: UITextField!
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 //        let login = loginTF.text
 //        let password = passwordTF.text
 //
-//        guard let url = urlString else {return}
+//        guard let url = URL(string: urlString+login/) else {return}
 //        //create json body
 //        var json = [String:Any]()
 //        json["username"] = login
