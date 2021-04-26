@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     @IBAction func logIn(_ sender: UIButton) {
         performSegue(withIdentifier: "loginToMain", sender: self)
-        
+        print("commit")
 //        //get login and password from textfields
 //        let login = loginTF.text
 //        let password = passwordTF.text
