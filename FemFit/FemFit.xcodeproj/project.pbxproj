@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E19B8CB2637F600005FD67F /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8CA2637F600005FD67F /* LaunchViewController.swift */; };
 		CE07C92B2633FFE1007853EF /* ExercisesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07C92A2633FFE1007853EF /* ExercisesCell.swift */; };
 		CE07C92D2634003B007853EF /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07C92C2634003B007853EF /* ExercisesViewController.swift */; };
 		CE07C92F26340182007853EF /* ExerciseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07C92E26340182007853EF /* ExerciseClass.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E19B8CA2637F600005FD67F /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		CE07C92A2633FFE1007853EF /* ExercisesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesCell.swift; sourceTree = "<group>"; };
 		CE07C92C2634003B007853EF /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
 		CE07C92E26340182007853EF /* ExerciseClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseClass.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E19B8C92637F5C8005FD67F /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				2E19B8CA2637F600005FD67F /* LaunchViewController.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
 		CE07C9292633FF9F007853EF /* Exercises */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 		CE88C1EF262E9CD100FD443A /* FemFit */ = {
 			isa = PBXGroup;
 			children = (
+				2E19B8C92637F5C8005FD67F /* Launch */,
 				CE07C9292633FF9F007853EF /* Exercises */,
 				CE88C1F0262E9CD100FD443A /* AppDelegate.swift */,
 				CE88C1F2262E9CD100FD443A /* ViewController.swift */,
@@ -160,6 +171,7 @@
 				CE07C92B2633FFE1007853EF /* ExercisesCell.swift in Sources */,
 				CE88C1F3262E9CD100FD443A /* ViewController.swift in Sources */,
 				CE88C1F1262E9CD100FD443A /* AppDelegate.swift in Sources */,
+				2E19B8CB2637F600005FD67F /* LaunchViewController.swift in Sources */,
 				CE07C92D2634003B007853EF /* ExercisesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
