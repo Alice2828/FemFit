@@ -10,8 +10,6 @@
 		2E19B8CB2637F600005FD67F /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8CA2637F600005FD67F /* LaunchViewController.swift */; };
 		2E19B8CE26380323005FD67F /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8CD26380323005FD67F /* DiaryViewController.swift */; };
 		2E19B8D026380341005FD67F /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8CF26380341005FD67F /* Meal.swift */; };
-		2E19B8D526380397005FD67F /* MealsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8D326380397005FD67F /* MealsTableViewCell.swift */; };
-		2E19B8D626380397005FD67F /* MealsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E19B8D426380397005FD67F /* MealsTableViewCell.xib */; };
 		2E19B8D8263803BC005FD67F /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8D7263803BC005FD67F /* Record.swift */; };
 		2E19B8DA263803F2005FD67F /* SecondDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8D9263803F2005FD67F /* SecondDiaryViewController.swift */; };
 		2E19B8DD26380425005FD67F /* RecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8DB26380425005FD67F /* RecordsTableViewCell.swift */; };
@@ -19,6 +17,9 @@
 		CE07C92B2633FFE1007853EF /* ExercisesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07C92A2633FFE1007853EF /* ExercisesCell.swift */; };
 		CE07C92D2634003B007853EF /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07C92C2634003B007853EF /* ExercisesViewController.swift */; };
 		CE07C92F26340182007853EF /* ExerciseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07C92E26340182007853EF /* ExerciseClass.swift */; };
+		CE616317263D475C00BB35EB /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE616316263D475C00BB35EB /* EndPoints.swift */; };
+		CE616319263D486800BB35EB /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE616318263D486800BB35EB /* Lists.swift */; };
+		CE61631C263D582700BB35EB /* TokenJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61631B263D582700BB35EB /* TokenJSON.swift */; };
 		CE88C1F1262E9CD100FD443A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88C1F0262E9CD100FD443A /* AppDelegate.swift */; };
 		CE88C1F3262E9CD100FD443A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88C1F2262E9CD100FD443A /* ViewController.swift */; };
 		CE88C1F6262E9CD100FD443A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE88C1F4262E9CD100FD443A /* Main.storyboard */; };
@@ -31,8 +32,6 @@
 		2E19B8CA2637F600005FD67F /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		2E19B8CD26380323005FD67F /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		2E19B8CF26380341005FD67F /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
-		2E19B8D326380397005FD67F /* MealsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsTableViewCell.swift; sourceTree = "<group>"; };
-		2E19B8D426380397005FD67F /* MealsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealsTableViewCell.xib; sourceTree = "<group>"; };
 		2E19B8D7263803BC005FD67F /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		2E19B8D9263803F2005FD67F /* SecondDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDiaryViewController.swift; sourceTree = "<group>"; };
 		2E19B8DB26380425005FD67F /* RecordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewCell.swift; sourceTree = "<group>"; };
@@ -40,6 +39,9 @@
 		CE07C92A2633FFE1007853EF /* ExercisesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesCell.swift; sourceTree = "<group>"; };
 		CE07C92C2634003B007853EF /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
 		CE07C92E26340182007853EF /* ExerciseClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseClass.swift; sourceTree = "<group>"; };
+		CE616316263D475C00BB35EB /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		CE616318263D486800BB35EB /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
+		CE61631B263D582700BB35EB /* TokenJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenJSON.swift; sourceTree = "<group>"; };
 		CE88C1ED262E9CD100FD443A /* FemFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FemFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE88C1F0262E9CD100FD443A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE88C1F2262E9CD100FD443A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,9 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				2E19B8CD26380323005FD67F /* DiaryViewController.swift */,
-				2E19B8CF26380341005FD67F /* Meal.swift */,
-				2E19B8D326380397005FD67F /* MealsTableViewCell.swift */,
-				2E19B8D426380397005FD67F /* MealsTableViewCell.xib */,
 				2E19B8D7263803BC005FD67F /* Record.swift */,
 				2E19B8D9263803F2005FD67F /* SecondDiaryViewController.swift */,
 				2E19B8DB26380425005FD67F /* RecordsTableViewCell.swift */,
@@ -89,9 +88,27 @@
 			children = (
 				CE07C92A2633FFE1007853EF /* ExercisesCell.swift */,
 				CE07C92C2634003B007853EF /* ExercisesViewController.swift */,
-				CE07C92E26340182007853EF /* ExerciseClass.swift */,
 			);
 			path = Exercises;
+			sourceTree = "<group>";
+		};
+		CE616315263D474B00BB35EB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE616316263D475C00BB35EB /* EndPoints.swift */,
+				CE616318263D486800BB35EB /* Lists.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CE61631A263D48FA00BB35EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E19B8CF26380341005FD67F /* Meal.swift */,
+				CE07C92E26340182007853EF /* ExerciseClass.swift */,
+				CE61631B263D582700BB35EB /* TokenJSON.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CE88C1E4262E9CD100FD443A = {
@@ -113,6 +130,8 @@
 		CE88C1EF262E9CD100FD443A /* FemFit */ = {
 			isa = PBXGroup;
 			children = (
+				CE61631A263D48FA00BB35EB /* Model */,
+				CE616315263D474B00BB35EB /* Utils */,
 				2E19B8CC2638028B005FD67F /* Diary */,
 				2E19B8C92637F5C8005FD67F /* Launch */,
 				CE07C9292633FF9F007853EF /* Exercises */,
@@ -186,7 +205,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E19B8DE26380425005FD67F /* RecordsTableViewCell.xib in Resources */,
-				2E19B8D626380397005FD67F /* MealsTableViewCell.xib in Resources */,
 				CE88C1FE262E9CD300FD443A /* LaunchScreen.storyboard in Resources */,
 				CE88C1FB262E9CD300FD443A /* Assets.xcassets in Resources */,
 				CE88C1F6262E9CD100FD443A /* Main.storyboard in Resources */,
@@ -204,12 +222,14 @@
 				CE07C92F26340182007853EF /* ExerciseClass.swift in Sources */,
 				CE07C92B2633FFE1007853EF /* ExercisesCell.swift in Sources */,
 				CE88C1F3262E9CD100FD443A /* ViewController.swift in Sources */,
-				2E19B8D526380397005FD67F /* MealsTableViewCell.swift in Sources */,
 				2E19B8D026380341005FD67F /* Meal.swift in Sources */,
 				2E19B8DA263803F2005FD67F /* SecondDiaryViewController.swift in Sources */,
+				CE61631C263D582700BB35EB /* TokenJSON.swift in Sources */,
 				2E19B8CE26380323005FD67F /* DiaryViewController.swift in Sources */,
 				CE88C1F1262E9CD100FD443A /* AppDelegate.swift in Sources */,
 				2E19B8CB2637F600005FD67F /* LaunchViewController.swift in Sources */,
+				CE616317263D475C00BB35EB /* EndPoints.swift in Sources */,
+				CE616319263D486800BB35EB /* Lists.swift in Sources */,
 				2E19B8D8263803BC005FD67F /* Record.swift in Sources */,
 				CE07C92D2634003B007853EF /* ExercisesViewController.swift in Sources */,
 				2E19B8DD26380425005FD67F /* RecordsTableViewCell.swift in Sources */,
