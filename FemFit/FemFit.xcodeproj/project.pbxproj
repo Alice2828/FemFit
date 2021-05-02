@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		071E4CAC4128C23B831EA40F /* Pods_FemFit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC15D59A99D07A5B771A3432 /* Pods_FemFit.framework */; };
 		2E19B8CB2637F600005FD67F /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8CA2637F600005FD67F /* LaunchViewController.swift */; };
-		2E19B8CE26380323005FD67F /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8CD26380323005FD67F /* DiaryViewController.swift */; };
-		2E19B8D026380341005FD67F /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8CF26380341005FD67F /* Meal.swift */; };
+		2E19B8CE26380323005FD67F /* SearchMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8CD26380323005FD67F /* SearchMealViewController.swift */; };
+		2E19B8D026380341005FD67F /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8CF26380341005FD67F /* Ingredient.swift */; };
 		2E19B8D8263803BC005FD67F /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8D7263803BC005FD67F /* Record.swift */; };
-		2E19B8DA263803F2005FD67F /* SecondDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8D9263803F2005FD67F /* SecondDiaryViewController.swift */; };
+		2E19B8DA263803F2005FD67F /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8D9263803F2005FD67F /* DiaryViewController.swift */; };
 		2E19B8DD26380425005FD67F /* RecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8DB26380425005FD67F /* RecordsTableViewCell.swift */; };
 		2E19B8DE26380425005FD67F /* RecordsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E19B8DC26380425005FD67F /* RecordsTableViewCell.xib */; };
 		CE07C92B2633FFE1007853EF /* ExercisesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07C92A2633FFE1007853EF /* ExercisesCell.swift */; };
@@ -30,14 +30,15 @@
 		CEC331D7263E86B9001C0D89 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEC331D6263E86B9001C0D89 /* GoogleService-Info.plist */; };
 		CEC331D9263E87B5001C0D89 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC331D8263E87B5001C0D89 /* RegistrationViewController.swift */; };
 		CEC331DB263E89C1001C0D89 /* UserCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC331DA263E89C1001C0D89 /* UserCustom.swift */; };
+		CEC331DE263EC27B001C0D89 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC331DD263EC27B001C0D89 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2E19B8CA2637F600005FD67F /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
-		2E19B8CD26380323005FD67F /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
-		2E19B8CF26380341005FD67F /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		2E19B8CD26380323005FD67F /* SearchMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMealViewController.swift; sourceTree = "<group>"; };
+		2E19B8CF26380341005FD67F /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		2E19B8D7263803BC005FD67F /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
-		2E19B8D9263803F2005FD67F /* SecondDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDiaryViewController.swift; sourceTree = "<group>"; };
+		2E19B8D9263803F2005FD67F /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		2E19B8DB26380425005FD67F /* RecordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewCell.swift; sourceTree = "<group>"; };
 		2E19B8DC26380425005FD67F /* RecordsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordsTableViewCell.xib; sourceTree = "<group>"; };
 		305BD76B00726025A0229B28 /* Pods-FemFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FemFit.debug.xcconfig"; path = "Target Support Files/Pods-FemFit/Pods-FemFit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -59,6 +60,7 @@
 		CEC331D6263E86B9001C0D89 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEC331D8263E87B5001C0D89 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		CEC331DA263E89C1001C0D89 /* UserCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCustom.swift; sourceTree = "<group>"; };
+		CEC331DD263EC27B001C0D89 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DC15D59A99D07A5B771A3432 /* Pods_FemFit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FemFit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -94,9 +96,9 @@
 		2E19B8CC2638028B005FD67F /* Diary */ = {
 			isa = PBXGroup;
 			children = (
-				2E19B8CD26380323005FD67F /* DiaryViewController.swift */,
+				2E19B8CD26380323005FD67F /* SearchMealViewController.swift */,
 				2E19B8D7263803BC005FD67F /* Record.swift */,
-				2E19B8D9263803F2005FD67F /* SecondDiaryViewController.swift */,
+				2E19B8D9263803F2005FD67F /* DiaryViewController.swift */,
 				2E19B8DB26380425005FD67F /* RecordsTableViewCell.swift */,
 				2E19B8DC26380425005FD67F /* RecordsTableViewCell.xib */,
 			);
@@ -132,7 +134,7 @@
 		CE61631A263D48FA00BB35EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2E19B8CF26380341005FD67F /* Meal.swift */,
+				2E19B8CF26380341005FD67F /* Ingredient.swift */,
 				CE07C92E26340182007853EF /* ExerciseClass.swift */,
 				CE61631B263D582700BB35EB /* TokenJSON.swift */,
 				CEC331DA263E89C1001C0D89 /* UserCustom.swift */,
@@ -161,6 +163,7 @@
 		CE88C1EF262E9CD100FD443A /* FemFit */ = {
 			isa = PBXGroup;
 			children = (
+				CEC331DC263EC267001C0D89 /* Profile */,
 				CE61631A263D48FA00BB35EB /* Model */,
 				CE616315263D474B00BB35EB /* Utils */,
 				2E19B8CC2638028B005FD67F /* Diary */,
@@ -177,6 +180,14 @@
 				CEC331D6263E86B9001C0D89 /* GoogleService-Info.plist */,
 			);
 			path = FemFit;
+			sourceTree = "<group>";
+		};
+		CEC331DC263EC267001C0D89 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CEC331DD263EC27B001C0D89 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,11 +311,12 @@
 				CE07C92F26340182007853EF /* ExerciseClass.swift in Sources */,
 				CE07C92B2633FFE1007853EF /* ExercisesCell.swift in Sources */,
 				CE88C1F3262E9CD100FD443A /* ViewController.swift in Sources */,
-				2E19B8D026380341005FD67F /* Meal.swift in Sources */,
+				2E19B8D026380341005FD67F /* Ingredient.swift in Sources */,
 				CEC331DB263E89C1001C0D89 /* UserCustom.swift in Sources */,
-				2E19B8DA263803F2005FD67F /* SecondDiaryViewController.swift in Sources */,
+				CEC331DE263EC27B001C0D89 /* ProfileViewController.swift in Sources */,
+				2E19B8DA263803F2005FD67F /* DiaryViewController.swift in Sources */,
 				CE61631C263D582700BB35EB /* TokenJSON.swift in Sources */,
-				2E19B8CE26380323005FD67F /* DiaryViewController.swift in Sources */,
+				2E19B8CE26380323005FD67F /* SearchMealViewController.swift in Sources */,
 				CE88C1F1262E9CD100FD443A /* AppDelegate.swift in Sources */,
 				2E19B8CB2637F600005FD67F /* LaunchViewController.swift in Sources */,
 				CEC331D9263E87B5001C0D89 /* RegistrationViewController.swift in Sources */,

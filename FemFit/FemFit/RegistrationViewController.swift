@@ -35,9 +35,10 @@ class RegistrationViewController: UIViewController {
                 Auth.auth().currentUser?.sendEmailVerification(completion: nil)
                 if error == nil{
                     self?.showMessage(title: "Success", message: "Please verify your email")
-                    let db = Database.database().reference().child("users").child((Auth.auth().currentUser?.uid)!)
-                    let user = UserCustom(email!, (Auth.auth().currentUser?.uid)!, "",name!,surname!)
-                    db.setValue(user.dict)
+                    let userTable = Database.database(url: "https://femfit-f5c0c-default-rtdb.europe-west1.firebasedatabase.app/").reference().child("users").child((Auth.auth().currentUser?.uid)!)
+                    let user = UserCustom(email!, (Auth.auth().currentUser?.uid)!, "", name!,surname!)
+                    userTable.setValue(user.dict)
+                  
                 }
                 else{
                     self?.showMessage(title: "Error", message: "Some problem occured")

@@ -336,11 +336,28 @@
         <!--Profile-->
         <scene sceneID="Zaw-yr-qql">
             <objects>
-                <viewController id="zh4-bn-hZM" sceneMemberID="viewController">
+                <viewController id="zh4-bn-hZM" customClass="ProfileViewController" customModule="FemFit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CAf-DA-eKG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oID-9A-HZf">
+                                <rect key="frame" x="159" y="393.66666666666669" width="57" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="06s-yy-qXT"/>
+                                    <constraint firstAttribute="width" constant="57" id="YCT-N5-MPS"/>
+                                </constraints>
+                                <state key="normal" title="Sign out"/>
+                                <connections>
+                                    <action selector="signOut:" destination="zh4-bn-hZM" eventType="touchUpInside" id="gdj-O4-RnM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oID-9A-HZf" firstAttribute="centerY" secondItem="yIt-Mt-ecA" secondAttribute="centerY" id="Dd1-HX-AV3"/>
+                            <constraint firstItem="oID-9A-HZf" firstAttribute="centerX" secondItem="yIt-Mt-ecA" secondAttribute="centerX" id="glK-r3-vaX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yIt-Mt-ecA"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="ZFJ-qh-xYD"/>
@@ -512,10 +529,10 @@
             </objects>
             <point key="canvasLocation" x="-2266.4000000000001" y="-0.44977511244377816"/>
         </scene>
-        <!--Diary View Controller-->
+        <!--Search Meal View Controller-->
         <scene sceneID="o9B-K6-pFI">
             <objects>
-                <viewController id="U6D-Lo-TzC" customClass="DiaryViewController" customModule="FemFit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="U6D-Lo-TzC" customClass="SearchMealViewController" customModule="FemFit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mVX-x6-QPJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -588,10 +605,10 @@
             </objects>
             <point key="canvasLocation" x="184.80000000000001" y="2344.5812807881775"/>
         </scene>
-        <!--Second Diary View Controller-->
+        <!--Diary View Controller-->
         <scene sceneID="rad-eW-khN">
             <objects>
-                <viewController id="9u1-dM-IzY" customClass="SecondDiaryViewController" customModule="FemFit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9u1-dM-IzY" customClass="DiaryViewController" customModule="FemFit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GUq-k2-jV2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
