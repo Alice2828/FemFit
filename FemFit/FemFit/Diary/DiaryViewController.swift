@@ -32,7 +32,7 @@ class DiaryViewController: UIViewController {
         mealsTableView.dataSource = self
         super.viewDidLoad()
         
-        guard let url =  URL(string: (urlString + ingredientPath + "?limit=100")) else {return}
+        guard let url =  URL(string: (urlString + ingredientPath + "?limit=500"+"&language=2")) else {return}
         //try make get request
         
         var request = URLRequest(url: url)

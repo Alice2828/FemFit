@@ -9,7 +9,7 @@
 
 import UIKit
 
-class SecondDiaryViewController: UIViewController, AddRecordProtocol, ChangeRecordProtocol {
+class SecondDiaryViewController: UIViewController, AddRecordProtocol, ChangeRecordProtocol, URLSessionDelegate {
     func changeRecord(index: Int, record: Record) {
        // records[index] = record
         recordsTableView.reloadData()
@@ -28,39 +28,12 @@ class SecondDiaryViewController: UIViewController, AddRecordProtocol, ChangeReco
         recordsTableView.dataSource = self
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
-        guard let url =  URL(string: (urlString + "nutritionplaninfo")) else {return}
-        //try make get request
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.setValue("Token \(token)", forHTTPHeaderField: "Authorization")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
-        
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-            print(response ?? "def")
-            print(String(data: data!, encoding: .utf8) ?? "def")
-            
-            do {
-                let decoder = JSONDecoder()
-                let nutritionPlanResponse = try decoder.decode(NutritionPlanResponse.self, from:
-                    data!) //Decode JSON Response Data
-             //   print(nutritionPlanResponse)
-                let nutritionPlans = nutritionPlanResponse.results
-                self.records = nutritionPlans[0].meals!
-                DispatchQueue.main.async {
-                    self.recordsTableView.reloadData()
-                }
-            } catch let error as NSError {
-                print(error)
-            }
-            
-            }.resume()
   
         recordsTableView.register(UINib(nibName: "RecordsTableViewCell", bundle: nil), forCellReuseIdentifier: "SecondReusableCell")
         
         
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as! DiaryViewController
         
@@ -105,5 +78,4 @@ extension SecondDiaryViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toEditRecord", sender: nil)
     }
-    
 }

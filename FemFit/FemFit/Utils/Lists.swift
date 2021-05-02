@@ -7,5 +7,8 @@
 //
 
 import Foundation
+import FirebaseAuth
+
 var exercisesList = [Exercise]()
  var mealsList = [Meal]()
+ var currentUser: User?

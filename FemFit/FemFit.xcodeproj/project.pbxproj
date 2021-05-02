@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071E4CAC4128C23B831EA40F /* Pods_FemFit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC15D59A99D07A5B771A3432 /* Pods_FemFit.framework */; };
 		2E19B8CB2637F600005FD67F /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8CA2637F600005FD67F /* LaunchViewController.swift */; };
 		2E19B8CE26380323005FD67F /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8CD26380323005FD67F /* DiaryViewController.swift */; };
 		2E19B8D026380341005FD67F /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8CF26380341005FD67F /* Meal.swift */; };
@@ -26,6 +27,9 @@
 		CE88C1F9262E9CD100FD443A /* FemFit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE88C1F7262E9CD100FD443A /* FemFit.xcdatamodeld */; };
 		CE88C1FB262E9CD300FD443A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE88C1FA262E9CD300FD443A /* Assets.xcassets */; };
 		CE88C1FE262E9CD300FD443A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE88C1FC262E9CD300FD443A /* LaunchScreen.storyboard */; };
+		CEC331D7263E86B9001C0D89 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEC331D6263E86B9001C0D89 /* GoogleService-Info.plist */; };
+		CEC331D9263E87B5001C0D89 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC331D8263E87B5001C0D89 /* RegistrationViewController.swift */; };
+		CEC331DB263E89C1001C0D89 /* UserCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC331DA263E89C1001C0D89 /* UserCustom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,8 @@
 		2E19B8D9263803F2005FD67F /* SecondDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDiaryViewController.swift; sourceTree = "<group>"; };
 		2E19B8DB26380425005FD67F /* RecordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewCell.swift; sourceTree = "<group>"; };
 		2E19B8DC26380425005FD67F /* RecordsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordsTableViewCell.xib; sourceTree = "<group>"; };
+		305BD76B00726025A0229B28 /* Pods-FemFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FemFit.debug.xcconfig"; path = "Target Support Files/Pods-FemFit/Pods-FemFit.debug.xcconfig"; sourceTree = "<group>"; };
+		65EB9B7E69920365D51292E2 /* Pods-FemFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FemFit.release.xcconfig"; path = "Target Support Files/Pods-FemFit/Pods-FemFit.release.xcconfig"; sourceTree = "<group>"; };
 		CE07C92A2633FFE1007853EF /* ExercisesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesCell.swift; sourceTree = "<group>"; };
 		CE07C92C2634003B007853EF /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
 		CE07C92E26340182007853EF /* ExerciseClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseClass.swift; sourceTree = "<group>"; };
@@ -50,6 +56,10 @@
 		CE88C1FA262E9CD300FD443A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE88C1FD262E9CD300FD443A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE88C1FF262E9CD300FD443A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEC331D6263E86B9001C0D89 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CEC331D8263E87B5001C0D89 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		CEC331DA263E89C1001C0D89 /* UserCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCustom.swift; sourceTree = "<group>"; };
+		DC15D59A99D07A5B771A3432 /* Pods_FemFit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FemFit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +67,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				071E4CAC4128C23B831EA40F /* Pods_FemFit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CE3BBBC25B584B9F0A51419 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				305BD76B00726025A0229B28 /* Pods-FemFit.debug.xcconfig */,
+				65EB9B7E69920365D51292E2 /* Pods-FemFit.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		2E19B8C92637F5C8005FD67F /* Launch */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +101,14 @@
 				2E19B8DC26380425005FD67F /* RecordsTableViewCell.xib */,
 			);
 			path = Diary;
+			sourceTree = "<group>";
+		};
+		64ECEB8A4BA968A102ACD88E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC15D59A99D07A5B771A3432 /* Pods_FemFit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CE07C9292633FF9F007853EF /* Exercises */ = {
@@ -107,6 +135,7 @@
 				2E19B8CF26380341005FD67F /* Meal.swift */,
 				CE07C92E26340182007853EF /* ExerciseClass.swift */,
 				CE61631B263D582700BB35EB /* TokenJSON.swift */,
+				CEC331DA263E89C1001C0D89 /* UserCustom.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,6 +145,8 @@
 			children = (
 				CE88C1EF262E9CD100FD443A /* FemFit */,
 				CE88C1EE262E9CD100FD443A /* Products */,
+				1CE3BBBC25B584B9F0A51419 /* Pods */,
+				64ECEB8A4BA968A102ACD88E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,12 +167,14 @@
 				2E19B8C92637F5C8005FD67F /* Launch */,
 				CE07C9292633FF9F007853EF /* Exercises */,
 				CE88C1F0262E9CD100FD443A /* AppDelegate.swift */,
+				CEC331D8263E87B5001C0D89 /* RegistrationViewController.swift */,
 				CE88C1F2262E9CD100FD443A /* ViewController.swift */,
 				CE88C1F4262E9CD100FD443A /* Main.storyboard */,
 				CE88C1FA262E9CD300FD443A /* Assets.xcassets */,
 				CE88C1FC262E9CD300FD443A /* LaunchScreen.storyboard */,
 				CE88C1FF262E9CD300FD443A /* Info.plist */,
 				CE88C1F7262E9CD100FD443A /* FemFit.xcdatamodeld */,
+				CEC331D6263E86B9001C0D89 /* GoogleService-Info.plist */,
 			);
 			path = FemFit;
 			sourceTree = "<group>";
@@ -153,9 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE88C202262E9CD300FD443A /* Build configuration list for PBXNativeTarget "FemFit" */;
 			buildPhases = (
+				CB49D57479EE9E7C85186D54 /* [CP] Check Pods Manifest.lock */,
 				CE88C1E9262E9CD100FD443A /* Sources */,
 				CE88C1EA262E9CD100FD443A /* Frameworks */,
 				CE88C1EB262E9CD100FD443A /* Resources */,
+				E8210DF722C427433146F2EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -205,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E19B8DE26380425005FD67F /* RecordsTableViewCell.xib in Resources */,
+				CEC331D7263E86B9001C0D89 /* GoogleService-Info.plist in Resources */,
 				CE88C1FE262E9CD300FD443A /* LaunchScreen.storyboard in Resources */,
 				CE88C1FB262E9CD300FD443A /* Assets.xcassets in Resources */,
 				CE88C1F6262E9CD100FD443A /* Main.storyboard in Resources */,
@@ -212,6 +248,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CB49D57479EE9E7C85186D54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FemFit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8210DF722C427433146F2EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FemFit/Pods-FemFit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FemFit/Pods-FemFit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FemFit/Pods-FemFit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE88C1E9262E9CD100FD443A /* Sources */ = {
@@ -223,11 +301,13 @@
 				CE07C92B2633FFE1007853EF /* ExercisesCell.swift in Sources */,
 				CE88C1F3262E9CD100FD443A /* ViewController.swift in Sources */,
 				2E19B8D026380341005FD67F /* Meal.swift in Sources */,
+				CEC331DB263E89C1001C0D89 /* UserCustom.swift in Sources */,
 				2E19B8DA263803F2005FD67F /* SecondDiaryViewController.swift in Sources */,
 				CE61631C263D582700BB35EB /* TokenJSON.swift in Sources */,
 				2E19B8CE26380323005FD67F /* DiaryViewController.swift in Sources */,
 				CE88C1F1262E9CD100FD443A /* AppDelegate.swift in Sources */,
 				2E19B8CB2637F600005FD67F /* LaunchViewController.swift in Sources */,
+				CEC331D9263E87B5001C0D89 /* RegistrationViewController.swift in Sources */,
 				CE616317263D475C00BB35EB /* EndPoints.swift in Sources */,
 				CE616319263D486800BB35EB /* Lists.swift in Sources */,
 				2E19B8D8263803BC005FD67F /* Record.swift in Sources */,
@@ -376,6 +456,7 @@
 		};
 		CE88C203262E9CD300FD443A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 305BD76B00726025A0229B28 /* Pods-FemFit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -393,6 +474,7 @@
 		};
 		CE88C204262E9CD300FD443A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65EB9B7E69920365D51292E2 /* Pods-FemFit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
