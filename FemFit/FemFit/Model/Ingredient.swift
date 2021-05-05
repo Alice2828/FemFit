@@ -36,24 +36,20 @@ struct Diary: Codable{
     let notes: [Note]?
 }
 class Note: Codable{
-    var id: String?
     var date: String?
     var totalCkal: String?
     var dict: [String: String]{
         return [
-            "id": id!,
             "date": date!,
             "totalCkal": totalCkal!,
         ]
     }
-    init(_ id: String?,_ date: String,_ totalCkal:String){
-        self.id = id
+    init(_ date: String, _ totalCkal:String){
         self.date = date
         self.totalCkal = totalCkal
     }
     init(snapshot: DataSnapshot){
         if let value = snapshot.value as? [String:String]{
-            id = value["id"]
             date = value["date"]
             totalCkal = value["totalCkal"]
         }

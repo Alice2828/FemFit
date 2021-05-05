@@ -80,6 +80,7 @@ extension SearchMealViewController: UITableViewDelegate, UITableViewDataSource, 
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chosenIngredient = filteredData[indexPath.row]
         //1. Create the alert controller.
         let alert = UIAlertController(title: "Add ingredient", message: "Enter a number", preferredStyle: .alert)
         
@@ -92,16 +93,21 @@ extension SearchMealViewController: UITableViewDelegate, UITableViewDataSource, 
             //date
             let date = Date()
             let formatter = DateFormatter()
-            formatter.dateFormat = "dd.MM.yyyy HH:mm"
-            let result = formatter.string(from: date)
-            
-            //            let gramms = alert?.textFields![0]
-            //            let time = alert?.textFields![1]
-           
-        
-            let randomId = Database.database(url: "https://femfit-f5c0c-default-rtdb.europe-west1.firebasedatabase.app/").reference().child("users").child((Auth.auth().currentUser?.uid)!).child("diary").child("notes").childByAutoId()
-             let note = Note(randomId.key!, result, "5")
-            randomId.setValue(note.dict)
+            formatter.dateFormat = "dd-MM-yyyy"
+            let formatterTime = DateFormatter()
+            formatterTime.dateFormat = "HH:mm:ss"
+            let dateResult = formatter.string(from: date)
+            let timeResult = formatterTime.string(from: date)
+            //get gramms
+            let gramms = Int((alert?.textFields![0].text)!)
+            let  kcal = String(chosenIngredient.energy! * gramms!/100)
+            //write in db
+//            let randomId = Database.database(url: "https://femfit-f5c0c-default-rtdb.europe-west1.firebasedatabase.app/").reference().child("users").child((Auth.auth().currentUser?.uid)!).child("diary").child("notes").child(dateResult)
+//
+//            let note = Note(dateResult, kcal)
+//            randomId.updateChildValues(note.dict)
+//            let ingredient = Database.database(url: "https://femfit-f5c0c-default-rtdb.europe-west1.firebasedatabase.app/").reference().child("users").child((Auth.auth().currentUser?.uid)!).child("diary").child("notes").child(dateResult).child("ingredients").child(timeResult)
+//            ingredient.setValue(chosenIngredient.id)
             
         }))
         // 3. Grab the value from the text field, and print it when the user clicks OK.

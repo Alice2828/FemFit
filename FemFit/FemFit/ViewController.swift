@@ -21,12 +21,6 @@ class ViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(goToRegisterPage))
         goToRegister.addGestureRecognizer(tap)
     }
-    override func viewDidAppear(_ animated: Bool) {
-        currentUser = Auth.auth().currentUser
-        if currentUser != nil && currentUser!.isEmailVerified{
-            self.performSegue(withIdentifier: "loginToMain", sender: Any?.self)
-        }
-    }
     
     @IBOutlet weak var goToRegister: UILabel!
     

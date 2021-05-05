@@ -499,6 +499,7 @@
                         <outlet property="SlidingRect" destination="JbK-l3-jnE" id="YCx-gE-6GD"/>
                         <outlet property="WelcomeImage" destination="D3n-5X-dqr" id="Ooc-ne-pOG"/>
                         <outlet property="WelcomeLabel" destination="ndg-CV-3z1" id="jPz-Xf-2ks"/>
+                        <segue destination="KzH-E1-vup" kind="presentation" identifier="toMain" id="bCb-I1-ssG"/>
                     </connections>
                 </viewController>
                 <view contentMode="scaleToFill" id="kko-GC-ppP">
@@ -630,6 +631,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9u1-dM-IzY" id="gDX-Pf-fiT"/>
+                                    <outlet property="delegate" destination="9u1-dM-IzY" id="DXK-Jk-o5X"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" name="BackgroundColor"/>
@@ -649,7 +654,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="recordsTableView" destination="cus-ue-THv" id="W5S-Sl-qit"/>
+                        <outlet property="recordsTableView" destination="cus-ue-THv" id="dIc-h9-N8j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efD-N9-iPw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -815,4 +820,7 @@
             <color red="1" green="0.44299998879432678" blue="0.44299998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="bCb-I1-ssG"/>
+    </inferredMetricsTieBreakers>
 </document>

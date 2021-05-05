@@ -13,3 +13,4 @@ var exercisesList = [Exercise]()
  var mealsList = [Ingredient]()
  var currentUser: User?
 var diary : Diary?
+var notes = [Note]()
