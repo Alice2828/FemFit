@@ -7,51 +7,62 @@
 //
 
 import UIKit
-let urlString = "https://wger.de/api/v2/"
+import Firebase
+import FirebaseAuth
+
 class ViewController: UIViewController {
     
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var loginTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let tap = UITapGestureRecognizer(target: self, action: #selector(goToRegisterPage))
+        goToRegister.addGestureRecognizer(tap)
     }
     
-    @IBAction func logIn(_ sender: UIButton) {
-        performSegue(withIdentifier: "loginToMain", sender: self)
-
-        print("hello")
-        print("hello")
-        
-
-//        //get login and password from textfields
-//        let login = loginTF.text
-//        let password = passwordTF.text
-//
-//        guard let url = URL(string: urlString+login/) else {return}
-//        //create json body
-//        var json = [String:Any]()
-//        json["username"] = login
-//        json["password"] = password
-//        //try make post request
-//        do {
-//            let data = try JSONSerialization.data(withJSONObject: json, options: [])
-//
-//            var request = URLRequest(url: url)
-//            request.httpMethod = "POST"
-//            request.httpBody = data
-//            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//            request.setValue("application/json", forHTTPHeaderField: "Accept")
-//
-//
-//            URLSession.shared.dataTask(with: request) { (data, response, error) in
-//                print(response ?? "def")
-//                print(String(data: data!, encoding: .utf8) ?? "def") //Try this too!
-//                }.resume()
-//            performSegue(withIdentifier: "loginToMain", sender: Any?)
-//        }catch{
-//        }
-   }
+    @IBOutlet weak var goToRegister: UILabel!
     
+    @IBAction func logIn(_ sender: UIButton) {
+        //get login and password from textfields
+        let email = loginTF.text
+        let password = passwordTF.text
+        indicator.startAnimating()
+        if email != "" && password != ""{
+            Auth.auth().signIn(withEmail: email!, password: password!){
+                [weak self]  (result, error) in
+                self?.indicator.stopAnimating()
+                if error == nil{
+                    if Auth.auth().currentUser!.isEmailVerified{
+                        self?.performSegue(withIdentifier: "loginToMain", sender: Any?.self)
+                    }
+                    else{
+                        self?.showMessage(title: "Warning", message: "Your email is not verified")
+                        self?.indicator.stopAnimating()
+                    }
+                }
+                else
+                {
+                    self?.indicator.stopAnimating()
+                }
+            }
+        }
+        else
+        {
+            self.indicator.stopAnimating()
+        }
+        
+    }
+    func showMessage(title:String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let ok = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(ok)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func goToRegisterPage(){
+        performSegue(withIdentifier: "toRegister", sender: Any?.self)
+    }
 }
 

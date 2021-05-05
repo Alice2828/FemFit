@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 var endpoint = "exercise/"
 var exercisesList = [Exercise]()
 var favExercisesList = [Exercise]()
@@ -44,6 +45,8 @@ class ExercisesViewController: UIViewController, UITableViewDelegate, UITableVie
             }
         }
         /*guard let url =  URL(string: (urlString + endpoint)) else {return}
+        self.exTableView.rowHeight = 150
+        guard let url =  URL(string: (urlString + exercisePath)) else {return}
         //try make get request
         
         var request = URLRequest(url: url)
