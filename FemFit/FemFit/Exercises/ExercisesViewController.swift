@@ -7,8 +7,7 @@
 //
 
 import UIKit
-var endpoint = "exercise/"
-var exercisesList = [Exercise]()
+
 
 class ExercisesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var exTableView: UITableView!
@@ -28,7 +27,7 @@ class ExercisesViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.exTableView.rowHeight = 150
-        guard let url =  URL(string: (urlString + endpoint)) else {return}
+        guard let url =  URL(string: (urlString + exercisePath)) else {return}
         //try make get request
         
         var request = URLRequest(url: url)

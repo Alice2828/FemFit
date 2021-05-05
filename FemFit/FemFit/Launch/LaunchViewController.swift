@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LaunchViewController: UIViewController {
 
@@ -36,7 +37,13 @@ class LaunchViewController: UIViewController {
         leftSwipe.direction = UISwipeGestureRecognizer.Direction.left
         self.view.addGestureRecognizer(leftSwipe)
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        currentUser = Auth.auth().currentUser
+        if currentUser != nil && currentUser!.isEmailVerified{
+            self.performSegue(withIdentifier: "toMain", sender: Any?.self)
+        }
+    }
+
     @objc func handleSwipes(_ sender: UISwipeGestureRecognizer)
     {
         timesSwiped += 1
