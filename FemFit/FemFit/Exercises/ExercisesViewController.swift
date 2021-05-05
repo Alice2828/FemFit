@@ -9,26 +9,41 @@
 import UIKit
 var endpoint = "exercise/"
 var exercisesList = [Exercise]()
+var favExercisesList = [Exercise]()
 
 class ExercisesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var exTableView: UITableView!
+    var categoryID: Int?
+    var exercisesByCategory = [Exercise]()
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return exercisesList.count
+        return exercisesByCategory.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "exerciseCell", for: indexPath) as? ExercisesCell
-        cell?.nameLabel.text = exercisesList[indexPath.row].name
+        
+            cell!.nameLabel.text = exercisesByCategory[indexPath.row].name
+            cell!.descriptionLabel.text = exercisesByCategory[indexPath.row].description
+        cell!.exerciseIndex = exercisesByCategory[indexPath.row].id
+            cell!.authorLabel.text = exercisesByCategory[indexPath.row].license_author
+        
         return cell!
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
-    }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.exTableView.rowHeight = 150
-        guard let url =  URL(string: (urlString + endpoint)) else {return}
+        exercisesList = [Exercise(id: 1, uuid: "h", name: "Push ups", status: "j", description: "do", creation_date: "h", category: 2, muscles: [2,3], muscles_secondary: [2,3], equipment: [2,3], language: 2, license: 2, license_author: "j", variations: [2,3]),
+        Exercise(id: 2, uuid: "h", name: "Push downs", status: "j", description: "do", creation_date: "h", category: 2, muscles: [2,3], muscles_secondary: [2,3], equipment: [2,3], language: 2, license: 2, license_author: "j", variations: [2,3]),
+        Exercise(id: 3, uuid: "h", name: "Push keks", status: "j", description: "do", creation_date: "h", category: 2, muscles: [2,3], muscles_secondary: [2,3], equipment: [2,3], language: 2, license: 2, license_author: "j", variations: [2,3]),
+        Exercise(id: 4, uuid: "h", name: "Push one", status: "j", description: "do", creation_date: "h", category: 1, muscles: [2,3], muscles_secondary: [2,3], equipment: [2,3], language: 2, license: 2, license_author: "j", variations: [2,3])]
+        for i in 0...exercisesList.count-1{
+            if exercisesList[i].category == categoryID{
+                exercisesByCategory.append(exercisesList[i])
+            }
+        }
+        /*guard let url =  URL(string: (urlString + endpoint)) else {return}
         //try make get request
         
         var request = URLRequest(url: url)
@@ -53,7 +68,7 @@ class ExercisesViewController: UIViewController, UITableViewDelegate, UITableVie
                 print(error)
             }
             
-            }.resume()
+            }.resume()*/
         
     }
     
