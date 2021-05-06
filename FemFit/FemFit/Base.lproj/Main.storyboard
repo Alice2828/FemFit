@@ -160,7 +160,6 @@
                 <navigationController id="mcE-ZP-pMm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="oT6-cS-KFV"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Svh-lj-oTD">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -177,7 +176,6 @@
                 <navigationController id="KsM-5e-NTm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="dUS-Tv-4pK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1AL-7k-f3X">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -194,7 +192,6 @@
                 <navigationController id="Q2n-XS-UcC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="El2-kT-okb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oug-Gn-Dl9">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -211,7 +208,6 @@
                 <navigationController id="bUB-vj-dN5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="CVc-Ub-yvA"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1z3-UU-XwZ">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -569,7 +565,6 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fcm-KU-R4u" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="frJ-JD-Blc">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -581,10 +576,10 @@
             </objects>
             <point key="canvasLocation" x="-2266.4000000000001" y="-0.44977511244377816"/>
         </scene>
-        <!--Diary View Controller-->
+        <!--Search Meal View Controller-->
         <scene sceneID="o9B-K6-pFI">
             <objects>
-                <viewController id="U6D-Lo-TzC" customClass="DiaryViewController" customModule="FemFit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="U6D-Lo-TzC" customClass="SearchMealViewController" customModule="FemFit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mVX-x6-QPJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -808,10 +803,10 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExerciesCollectionViewCell" id="PNP-2P-GzW" customClass="ExerciesCollectionViewCell" customModule="FemFit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="297.33333333333331" height="220"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="297.66666666666669" height="220"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GWf-Nb-QxL">
-                                            <rect key="frame" x="0.0" y="0.0" width="297.33333333333331" height="220"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="297.66666666666669" height="220"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Снимок экрана 2021-05-03 в 06.11.10" translatesAutoresizingMaskIntoConstraints="NO" id="YoH-HW-jga">

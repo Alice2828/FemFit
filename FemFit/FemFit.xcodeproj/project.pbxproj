@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E19B8CB2637F600005FD67F /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8CA2637F600005FD67F /* LaunchViewController.swift */; };
-		2E19B8CE26380323005FD67F /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8CD26380323005FD67F /* DiaryViewController.swift */; };
+		2E19B8CE26380323005FD67F /* SearchMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8CD26380323005FD67F /* SearchMealViewController.swift */; };
 		2E19B8D026380341005FD67F /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8CF26380341005FD67F /* Meal.swift */; };
 		2E19B8D526380397005FD67F /* MealsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8D326380397005FD67F /* MealsTableViewCell.swift */; };
 		2E19B8D626380397005FD67F /* MealsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E19B8D426380397005FD67F /* MealsTableViewCell.xib */; };
@@ -33,7 +33,7 @@
 
 /* Begin PBXFileReference section */
 		2E19B8CA2637F600005FD67F /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
-		2E19B8CD26380323005FD67F /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
+		2E19B8CD26380323005FD67F /* SearchMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMealViewController.swift; sourceTree = "<group>"; };
 		2E19B8CF26380341005FD67F /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		2E19B8D326380397005FD67F /* MealsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsTableViewCell.swift; sourceTree = "<group>"; };
 		2E19B8D426380397005FD67F /* MealsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealsTableViewCell.xib; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		2E19B8CC2638028B005FD67F /* Diary */ = {
 			isa = PBXGroup;
 			children = (
-				2E19B8CD26380323005FD67F /* DiaryViewController.swift */,
+				2E19B8CD26380323005FD67F /* SearchMealViewController.swift */,
 				2E19B8CF26380341005FD67F /* Meal.swift */,
 				2E19B8D326380397005FD67F /* MealsTableViewCell.swift */,
 				2E19B8D426380397005FD67F /* MealsTableViewCell.xib */,
@@ -230,7 +230,7 @@
 				2E19B8D026380341005FD67F /* Meal.swift in Sources */,
 				2E19B8DA263803F2005FD67F /* SecondDiaryViewController.swift in Sources */,
 				2E93CA0226404365006CDB7C /* LikesViewController.swift in Sources */,
-				2E19B8CE26380323005FD67F /* DiaryViewController.swift in Sources */,
+				2E19B8CE26380323005FD67F /* SearchMealViewController.swift in Sources */,
 				2E82809D2642022100246A5A /* FirstExercisesViewController.swift in Sources */,
 				CE88C1F1262E9CD100FD443A /* AppDelegate.swift in Sources */,
 				2E19B8CB2637F600005FD67F /* LaunchViewController.swift in Sources */,

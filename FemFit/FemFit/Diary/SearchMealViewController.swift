@@ -16,7 +16,7 @@ protocol ChangeRecordProtocol {
 }
 
 
-class DiaryViewController: UIViewController {
+class SearchMealViewController: UIViewController {
     var meals: [Meal] = [
         Meal(name: "Chicken breast", grams: 150, calories: 110.0),
         Meal(name: "Rice", grams: 200, calories: 150.9)
@@ -142,7 +142,7 @@ class DiaryViewController: UIViewController {
     
 
 }
-extension DiaryViewController: UITableViewDelegate, UITableViewDataSource {
+extension SearchMealViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return meals.count
     }

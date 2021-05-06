@@ -42,7 +42,7 @@ class SecondDiaryViewController: UIViewController, AddRecordProtocol, ChangeReco
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! DiaryViewController
+        let destination = segue.destination as! SearchMealViewController
         
         if segue.identifier == "toAddRecord"{
              destination.delegate = self
