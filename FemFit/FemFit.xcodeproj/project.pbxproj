@@ -16,6 +16,10 @@
 		2E19B8DA263803F2005FD67F /* SecondDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8D9263803F2005FD67F /* SecondDiaryViewController.swift */; };
 		2E19B8DD26380425005FD67F /* RecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19B8DB26380425005FD67F /* RecordsTableViewCell.swift */; };
 		2E19B8DE26380425005FD67F /* RecordsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E19B8DC26380425005FD67F /* RecordsTableViewCell.xib */; };
+		2E82809D2642022100246A5A /* FirstExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E82809C2642022100246A5A /* FirstExercisesViewController.swift */; };
+		2E82809F264202B600246A5A /* ExerciesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E82809E264202B600246A5A /* ExerciesCollectionViewCell.swift */; };
+		2E8280A1264202DE00246A5A /* ExerciseButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8280A0264202DE00246A5A /* ExerciseButtonTableViewCell.swift */; };
+		2E93CA0226404365006CDB7C /* LikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E93CA0126404365006CDB7C /* LikesViewController.swift */; };
 		CE07C92B2633FFE1007853EF /* ExercisesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07C92A2633FFE1007853EF /* ExercisesCell.swift */; };
 		CE07C92D2634003B007853EF /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07C92C2634003B007853EF /* ExercisesViewController.swift */; };
 		CE07C92F26340182007853EF /* ExerciseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07C92E26340182007853EF /* ExerciseClass.swift */; };
@@ -37,6 +41,10 @@
 		2E19B8D9263803F2005FD67F /* SecondDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDiaryViewController.swift; sourceTree = "<group>"; };
 		2E19B8DB26380425005FD67F /* RecordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewCell.swift; sourceTree = "<group>"; };
 		2E19B8DC26380425005FD67F /* RecordsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordsTableViewCell.xib; sourceTree = "<group>"; };
+		2E82809C2642022100246A5A /* FirstExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstExercisesViewController.swift; sourceTree = "<group>"; };
+		2E82809E264202B600246A5A /* ExerciesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciesCollectionViewCell.swift; sourceTree = "<group>"; };
+		2E8280A0264202DE00246A5A /* ExerciseButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseButtonTableViewCell.swift; sourceTree = "<group>"; };
+		2E93CA0126404365006CDB7C /* LikesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesViewController.swift; sourceTree = "<group>"; };
 		CE07C92A2633FFE1007853EF /* ExercisesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesCell.swift; sourceTree = "<group>"; };
 		CE07C92C2634003B007853EF /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
 		CE07C92E26340182007853EF /* ExerciseClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseClass.swift; sourceTree = "<group>"; };
@@ -84,12 +92,23 @@
 			path = Diary;
 			sourceTree = "<group>";
 		};
+		2E93CA0026404344006CDB7C /* Likes */ = {
+			isa = PBXGroup;
+			children = (
+				2E93CA0126404365006CDB7C /* LikesViewController.swift */,
+			);
+			path = Likes;
+			sourceTree = "<group>";
+		};
 		CE07C9292633FF9F007853EF /* Exercises */ = {
 			isa = PBXGroup;
 			children = (
 				CE07C92A2633FFE1007853EF /* ExercisesCell.swift */,
 				CE07C92C2634003B007853EF /* ExercisesViewController.swift */,
 				CE07C92E26340182007853EF /* ExerciseClass.swift */,
+				2E82809C2642022100246A5A /* FirstExercisesViewController.swift */,
+				2E82809E264202B600246A5A /* ExerciesCollectionViewCell.swift */,
+				2E8280A0264202DE00246A5A /* ExerciseButtonTableViewCell.swift */,
 			);
 			path = Exercises;
 			sourceTree = "<group>";
@@ -113,6 +132,7 @@
 		CE88C1EF262E9CD100FD443A /* FemFit */ = {
 			isa = PBXGroup;
 			children = (
+				2E93CA0026404344006CDB7C /* Likes */,
 				2E19B8CC2638028B005FD67F /* Diary */,
 				2E19B8C92637F5C8005FD67F /* Launch */,
 				CE07C9292633FF9F007853EF /* Exercises */,
@@ -202,12 +222,16 @@
 			files = (
 				CE88C1F9262E9CD100FD443A /* FemFit.xcdatamodeld in Sources */,
 				CE07C92F26340182007853EF /* ExerciseClass.swift in Sources */,
+				2E8280A1264202DE00246A5A /* ExerciseButtonTableViewCell.swift in Sources */,
 				CE07C92B2633FFE1007853EF /* ExercisesCell.swift in Sources */,
 				CE88C1F3262E9CD100FD443A /* ViewController.swift in Sources */,
+				2E82809F264202B600246A5A /* ExerciesCollectionViewCell.swift in Sources */,
 				2E19B8D526380397005FD67F /* MealsTableViewCell.swift in Sources */,
 				2E19B8D026380341005FD67F /* Meal.swift in Sources */,
 				2E19B8DA263803F2005FD67F /* SecondDiaryViewController.swift in Sources */,
+				2E93CA0226404365006CDB7C /* LikesViewController.swift in Sources */,
 				2E19B8CE26380323005FD67F /* DiaryViewController.swift in Sources */,
+				2E82809D2642022100246A5A /* FirstExercisesViewController.swift in Sources */,
 				CE88C1F1262E9CD100FD443A /* AppDelegate.swift in Sources */,
 				2E19B8CB2637F600005FD67F /* LaunchViewController.swift in Sources */,
 				2E19B8D8263803BC005FD67F /* Record.swift in Sources */,
