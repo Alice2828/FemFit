@@ -55,10 +55,10 @@
 		2E8280A0264202DE00246A5A /* ExerciseButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseButtonTableViewCell.swift; sourceTree = "<group>"; };
 		2E93CA0126404365006CDB7C /* LikesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesViewController.swift; sourceTree = "<group>"; };
 		2EA7A4F326479AD2001400A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		2EA7A5062647B241001400A6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = FemFit/Exercises/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
+		2EA7A5062647B241001400A6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = FemFit/Profile/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		2EA7A5082647B29A001400A6 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		2EA7A50A2647B2C2001400A6 /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Lists.swift; path = FemFit/Lists.swift; sourceTree = SOURCE_ROOT; };
-		2EA7A50C2647B2DD001400A6 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EndPoints.swift; path = FemFit/EndPoints.swift; sourceTree = SOURCE_ROOT; };
+		2EA7A50A2647B2C2001400A6 /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Lists.swift; path = FemFit/Utils/Lists.swift; sourceTree = SOURCE_ROOT; };
+		2EA7A50C2647B2DD001400A6 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EndPoints.swift; path = FemFit/Utils/EndPoints.swift; sourceTree = SOURCE_ROOT; };
 		2EA7A50E2647B35C001400A6 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		2EA7A5102647B375001400A6 /* UserCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCustom.swift; sourceTree = "<group>"; };
 		61A03B51D1F49916BBBAB608 /* Pods-FemFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FemFit.release.xcconfig"; path = "Target Support Files/Pods-FemFit/Pods-FemFit.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,21 +129,21 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		2EA7A4FA26479F9B001400A6 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				2EA7A50A2647B2C2001400A6 /* Lists.swift */,
-				2EA7A50C2647B2DD001400A6 /* EndPoints.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		2EA7A5012647A540001400A6 /* Profile */ = {
+		2EA7A5122647B3EC001400A6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				2EA7A5062647B241001400A6 /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		2EA7A5132647B3F6001400A6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2EA7A50C2647B2DD001400A6 /* EndPoints.swift */,
+				2EA7A50A2647B2C2001400A6 /* Lists.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		CE07C9292633FF9F007853EF /* Exercises */ = {
@@ -179,8 +179,8 @@
 		CE88C1EF262E9CD100FD443A /* FemFit */ = {
 			isa = PBXGroup;
 			children = (
-				2EA7A5012647A540001400A6 /* Profile */,
-				2EA7A4FA26479F9B001400A6 /* Utils */,
+				2EA7A5132647B3F6001400A6 /* Utils */,
+				2EA7A5122647B3EC001400A6 /* Profile */,
 				2EA7A4F526479F65001400A6 /* Model */,
 				2E93CA0026404344006CDB7C /* Likes */,
 				2E19B8CC2638028B005FD67F /* Diary */,
