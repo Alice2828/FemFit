@@ -27,7 +27,7 @@ class FirstExerciesViewController: UIViewController {
 extension FirstExerciesViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        3
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -40,7 +40,7 @@ extension FirstExerciesViewController: UICollectionViewDelegate, UICollectionVie
 extension FirstExerciesViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        buttonsArray.count
+        return buttonsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
