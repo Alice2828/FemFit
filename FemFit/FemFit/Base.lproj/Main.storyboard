@@ -135,8 +135,8 @@
                         <outlet property="indicator" destination="FQh-Sn-zGA" id="h0S-2U-83Q"/>
                         <outlet property="loginTF" destination="Um0-TQ-I8d" id="dXM-PN-nQO"/>
                         <outlet property="passwordTF" destination="mPp-dp-tjb" id="ng1-d1-GRE"/>
-                        <segue destination="KzH-E1-vup" kind="presentation" identifier="loginToMain" modalPresentationStyle="overFullScreen" id="os4-P3-mUE"/>
-                        <segue destination="hBh-dK-U4K" kind="presentation" identifier="toRegister" modalPresentationStyle="overFullScreen" id="gQx-Pj-oCz"/>
+                        <segue destination="KzH-E1-vup" kind="presentation" identifier="loginToMain" id="os4-P3-mUE"/>
+                        <segue destination="hBh-dK-U4K" kind="presentation" identifier="toRegister" id="gQx-Pj-oCz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -148,11 +148,11 @@
             <objects>
                 <viewController id="hBh-dK-U4K" customClass="RegistrationViewController" customModule="FemFit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8V2-me-kzR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="yl2-Fd-2g0">
-                                <rect key="frame" x="20" y="216" width="335" height="390"/>
+                                <rect key="frame" x="20" y="167" width="335" height="390"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JdJ-B6-LFL">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
@@ -242,7 +242,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tdv-G7-PUl">
-                                <rect key="frame" x="20" y="73.666666666666671" width="151.66666666666666" height="52.333333333333329"/>
+                                <rect key="frame" x="20" y="24.666666666666671" width="151.66666666666666" height="52.333333333333329"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vth-oM-FWb">
                                         <rect key="frame" x="0.0" y="0.0" width="151.66666666666666" height="26.333333333333332"/>
@@ -317,7 +317,7 @@
                 <navigationController id="mcE-ZP-pMm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="oT6-cS-KFV"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Svh-lj-oTD">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -334,7 +334,7 @@
                 <navigationController id="KsM-5e-NTm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="dUS-Tv-4pK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1AL-7k-f3X">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -351,7 +351,7 @@
                 <navigationController id="Q2n-XS-UcC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="El2-kT-okb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oug-Gn-Dl9">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -368,7 +368,7 @@
                 <navigationController id="bUB-vj-dN5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="CVc-Ub-yvA"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1z3-UU-XwZ">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -384,11 +384,11 @@
             <objects>
                 <viewController id="lF5-x5-TSK" customClass="ExercisesViewController" customModule="FemFit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uX6-Fb-mlG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="190" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XWU-TW-3tn">
-                                <rect key="frame" x="16" y="88" width="343" height="724"/>
+                                <rect key="frame" x="16" y="56" width="343" height="702"/>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" name="BackgroundColor"/>
                                 <prototypes>
@@ -476,7 +476,7 @@
             <objects>
                 <viewController id="Gzl-X1-gJI" customClass="LikesViewController" customModule="FemFit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wri-Fd-7VP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="190" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2ld-zB-bhv">
@@ -564,7 +564,7 @@
             <objects>
                 <viewController id="zh4-bn-hZM" customClass="ProfileViewController" customModule="FemFit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CAf-DA-eKG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSI-lc-SYj">
@@ -721,7 +721,7 @@
                         <outlet property="SlidingRect" destination="JbK-l3-jnE" id="YCx-gE-6GD"/>
                         <outlet property="WelcomeImage" destination="D3n-5X-dqr" id="Ooc-ne-pOG"/>
                         <outlet property="WelcomeLabel" destination="ndg-CV-3z1" id="jPz-Xf-2ks"/>
-                        <segue destination="KzH-E1-vup" kind="presentation" identifier="toMain" modalPresentationStyle="overFullScreen" id="Ejz-W3-IM7"/>
+                        <segue destination="KzH-E1-vup" kind="presentation" identifier="toMain" id="Ejz-W3-IM7"/>
                     </connections>
                 </viewController>
                 <view contentMode="scaleToFill" id="kko-GC-ppP">
@@ -757,11 +757,11 @@
             <objects>
                 <viewController id="U6D-Lo-TzC" customClass="SearchMealViewController" customModule="FemFit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mVX-x6-QPJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="88" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hYH-Mc-sNC">
-                                <rect key="frame" x="0.0" y="144" width="375" height="585"/>
+                                <rect key="frame" x="0.0" y="112" width="375" height="563"/>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" name="BackgroundColor"/>
                                 <prototypes>
@@ -796,7 +796,7 @@
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="dfe-Mh-ga7">
-                                <rect key="frame" x="0.0" y="88" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="U6D-Lo-TzC" id="XQT-c9-BiD"/>
@@ -830,7 +830,7 @@
             <objects>
                 <viewController id="9u1-dM-IzY" customClass="DiaryViewController" customModule="FemFit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GUq-k2-jV2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Снимок экрана 2021-04-26 в 05.15.35" translatesAutoresizingMaskIntoConstraints="NO" id="sJT-2n-Xov">
@@ -879,7 +879,7 @@
             <objects>
                 <viewController id="FcC-eY-MlR" customClass="FirstExerciesViewController" customModule="FemFit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aAp-G5-Nk6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Снимок экрана 2021-04-26 в 03.42.47" highlightedImage="circ" translatesAutoresizingMaskIntoConstraints="NO" id="SgU-gO-DrU">
@@ -1058,7 +1058,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="0FF-gA-loc"/>
-        <segue reference="os4-P3-mUE"/>
+        <segue reference="Ejz-W3-IM7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="FirslWelcomeImage" width="192.66667175292969" height="144"/>
