@@ -8,7 +8,7 @@
 
 import UIKit
 var endpoint = "exercise/"
-var exercisesList = [Exercise]()
+//var exercisesList = [Exercise]()
 var favExercisesList = [Exercise]()
 
 class ExercisesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 protocol AddRecordProtocol {
     func addRecord(record: Record)
 }
@@ -15,154 +14,113 @@ protocol ChangeRecordProtocol {
     func changeRecord(index: Int, record: Record)
 }
 
-
 class SearchMealViewController: UIViewController {
-    var meals: [Meal] = [
-        Meal(name: "Chicken breast", grams: 150, calories: 110.0),
-        Meal(name: "Rice", grams: 200, calories: 150.9)
-    ]
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    var filteredData = [Ingredient]()
     var currentRecord: Record?
     var currentIndex: Int?
     var cups = 0
     var delegate: AddRecordProtocol?
     var changeDelegate: ChangeRecordProtocol?
-
-    @IBOutlet weak var cup1: UIButton!
-    @IBOutlet weak var cup2: UIButton!
-    @IBOutlet weak var cup3: UIButton!
-    @IBOutlet weak var cup4: UIButton!
-    @IBOutlet weak var cup5: UIButton!
-    @IBOutlet weak var cup6: UIButton!
-    @IBOutlet weak var cup7: UIButton!
-    
-    @IBAction func cupPressed1(_ sender: Any) {
-        cup1.layer.backgroundColor = UIColor.blue.cgColor
-        cups = 1
-    }
-    @IBAction func cupPressed2(_ sender: UIButton) {
-        cup1.layer.backgroundColor = UIColor.blue.cgColor
-        cup2.layer.backgroundColor = UIColor.blue.cgColor
-        cups = 2
-    }
-    @IBAction func cupPressed3(_ sender: UIButton) {
-        cup1.layer.backgroundColor = UIColor.blue.cgColor
-        cup2.layer.backgroundColor = UIColor.blue.cgColor
-        cup3.layer.backgroundColor = UIColor.blue.cgColor
-        cups = 3
-    }
-    @IBAction func cupPressed4(_ sender: UIButton) {
-        cup1.layer.backgroundColor = UIColor.blue.cgColor
-        cup2.layer.backgroundColor = UIColor.blue.cgColor
-        cup3.layer.backgroundColor = UIColor.blue.cgColor
-        cup4.layer.backgroundColor = UIColor.blue.cgColor
-        cups = 4
-    }
-    @IBAction func cupPressed5(_ sender: UIButton) {
-        cup1.layer.backgroundColor = UIColor.blue.cgColor
-        cup2.layer.backgroundColor = UIColor.blue.cgColor
-        cup3.layer.backgroundColor = UIColor.blue.cgColor
-        cup4.layer.backgroundColor = UIColor.blue.cgColor
-        cup5.layer.backgroundColor = UIColor.blue.cgColor
-        cups = 5
-    }
-    @IBAction func cupPressed6(_ sender: Any) {
-        cup1.layer.backgroundColor = UIColor.blue.cgColor
-        cup2.layer.backgroundColor = UIColor.blue.cgColor
-        cup3.layer.backgroundColor = UIColor.blue.cgColor
-        cup4.layer.backgroundColor = UIColor.blue.cgColor
-        cup5.layer.backgroundColor = UIColor.blue.cgColor
-        cup6.layer.backgroundColor = UIColor.blue.cgColor
-        cups = 6
-    }
-    @IBAction func cupPressed7(_ sender: Any) {
-        cup1.layer.backgroundColor = UIColor.blue.cgColor
-        cup2.layer.backgroundColor = UIColor.blue.cgColor
-        cup3.layer.backgroundColor = UIColor.blue.cgColor
-        cup4.layer.backgroundColor = UIColor.blue.cgColor
-        cup5.layer.backgroundColor = UIColor.blue.cgColor
-        cup6.layer.backgroundColor = UIColor.blue.cgColor
-        cup7.layer.backgroundColor = UIColor.blue.cgColor
-        cups = 7
-    }
-    
-    @IBAction func saveRecord(_ sender: UIButton) {
-        let newRecord = Record(meals: meals, weight: Int(weightTextField.text!)!, cupsOfWater: cups, date: Date())
-        if currentIndex == nil{
-            delegate?.addRecord(record: newRecord)
-        }else{
-            changeDelegate?.changeRecord(index: currentIndex!, record: newRecord)
-        }
-        
-        navigationController?.popViewController(animated: true)
-    }
-    
-    
-    @IBOutlet weak var weightTextField: UITextField!
-    @IBAction func MealAdded(_ sender: UIBarButtonItem) {
-        let alert = UIAlertController(title: "Add a meal", message: "Describe your meal", preferredStyle: .alert)
-        present(alert, animated: true)
-        alert.addTextField()
-        alert.addTextField()
-        alert.textFields![0].placeholder = "Meal"
-        alert.textFields![1].placeholder = "Grams"
-        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: {(action) in
-            let name = alert.textFields![0].text
-            let grams = alert.textFields![1].text
-            //calculate calories
-            self.meals.append(Meal(name: name!, grams: Int(grams!)!, calories: 100.0))
-            self.mealsTableView.reloadData()
-        }))
-    }
-    
     
     @IBOutlet weak var mealsTableView: UITableView!
     override func viewDidLoad() {
-        if currentRecord != nil{
-             meals = currentRecord?.meals as! [Meal]
-        }else{
-            meals = []
-        }
+        searchBar.delegate = self
         mealsTableView.delegate = self
         mealsTableView.dataSource = self
         super.viewDidLoad()
-        //self.navigationController?.isNavigationBarHidden = false
-        weightTextField.layer.cornerRadius = 10
-        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-
         
-        mealsTableView.register(UINib(nibName: "MealsTableViewCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
-
-        // Do any additional setup after loading the view.
+        guard let url =  URL(string: (urlString + ingredientPath + "?limit=500"+"&language=2")) else {return}
+        //try make get request
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            print(response ?? "def")
+            print(String(data: data!, encoding: .utf8) ?? "def")
+            
+            do {
+                let decoder = JSONDecoder()
+                let mealsResponse = try decoder.decode(IngredientsResponse.self, from:
+                    data!) //Decode JSON Response Data
+                mealsList = mealsResponse.results!
+                self.filteredData = mealsList
+                DispatchQueue.main.async {
+                    self.mealsTableView.reloadData()
+                }
+            } catch let error as NSError {
+                print(error)
+            }
+            
+            }.resume()
+        //        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        //  view.addGestureRecognizer(tap)
     }
     @objc func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
-    
-
 }
-extension SearchMealViewController: UITableViewDelegate, UITableViewDataSource {
+extension SearchMealViewController: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return meals.count
+        return filteredData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = mealsTableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! MealsTableViewCell
-        cell.nameLabel.text = meals[indexPath.row].name
-        cell.gramsLabel.text = String(meals[indexPath.row].grams)+" g"
-        cell.caloriesLabel.text = String(meals[indexPath.row].calories)+" kcal"
-        cell.cellView.layer.cornerRadius = 20
+        let cell = mealsTableView.dequeueReusableCell(withIdentifier: "ingredient", for: indexPath)
+        cell.textLabel!.text = filteredData[indexPath.row].name
+        cell.detailTextLabel!.text = filteredData[indexPath.row].protein
         return cell
     }
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            meals.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chosenIngredient = filteredData[indexPath.row]
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "Add ingredient", message: "Enter a number", preferredStyle: .alert)
+        
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField { (textField) in
+            textField.placeholder = "gramms"
         }
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak alert] (_) in
+            //date
+            let date = Date()
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd-MM-yyyy"
+            let formatterTime = DateFormatter()
+            formatterTime.dateFormat = "HH:mm:ss"
+            let dateResult = formatter.string(from: date)
+            let timeResult = formatterTime.string(from: date)
+            //get gramms
+            let gramms = Int((alert?.textFields![0].text)!)
+            let  kcal = String(chosenIngredient.energy! * gramms!/100)
+            //write in db
+
+//            let randomId = Database.database(url: "https://femfit-f5c0c-default-rtdb.europe-west1.firebasedatabase.app/").reference().child("users").child((Auth.auth().currentUser?.uid)!).child("diary").child("notes").child(dateResult)
+//
+//            let note = Note(dateResult, kcal)
+//            randomId.updateChildValues(note.dict)
+//            let ingredient = Database.database(url: "https://femfit-f5c0c-default-rtdb.europe-west1.firebasedatabase.app/").reference().child("users").child((Auth.auth().currentUser?.uid)!).child("diary").child("notes").child(dateResult).child("ingredients").child(timeResult)
+//            ingredient.setValue(chosenIngredient.id)
+            
+        }))
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default))
+        
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
     }
-    
-    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filteredData = searchText.isEmpty ? mealsList : mealsList.filter { (item: Ingredient) -> Bool in
+            // If dataItem matches the searchText, return true to include it
+            return item.name!.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+        }
+        
+        mealsTableView.reloadData()
+    }
 }

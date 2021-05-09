@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LaunchViewController: UIViewController {
 
@@ -19,6 +20,13 @@ class LaunchViewController: UIViewController {
     @IBOutlet weak var WelcomeImage: UIImageView!
     @IBOutlet weak var WelcomeLabel: UILabel!
     var timesSwiped = 0
+    
+    override func viewDidAppear(_ animated: Bool) {
+        currentUser = Auth.auth().currentUser
+        if currentUser != nil && currentUser!.isEmailVerified{
+            self.performSegue(withIdentifier: "toMain", sender: Any?.self)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.alpha = 0

@@ -8,7 +8,7 @@
 
 import Foundation
 struct Record {
-    let meals: [Meal]
+    let meals: [Ingredient]
     let weight: Int
     let cupsOfWater: Int
     let date: Date
