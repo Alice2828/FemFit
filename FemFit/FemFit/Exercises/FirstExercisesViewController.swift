@@ -17,7 +17,6 @@ class FirstExerciesViewController: UIViewController {
         super.viewDidLoad()
         buttonTableView.delegate = self
         buttonTableView.dataSource = self
-        
 
        
     }
@@ -32,6 +31,7 @@ extension FirstExerciesViewController: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExerciesCollectionViewCell", for: indexPath) as! ExerciesCollectionViewCell
+        collectionView.layer.cornerRadius = 10
         cell.image.layer.cornerRadius = 10
         cell.view.layer.cornerRadius = 10
         return cell

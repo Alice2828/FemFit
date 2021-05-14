@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 var endpoint = "exercise/"
 //var exercisesList = [Exercise]()
 var favExercisesList = [Exercise]()
@@ -30,7 +31,9 @@ class ExercisesViewController: UIViewController, UITableViewDelegate, UITableVie
         
         return cell!
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +45,18 @@ class ExercisesViewController: UIViewController, UITableViewDelegate, UITableVie
             if exercisesList[i].category == categoryID{
                 exercisesByCategory.append(exercisesList[i])
             }
+           // delete
+//            if let appDelegate = UIApplication.shared.delegate as? AppDelegate{
+//                   let context = appDelegate.persistentContainer.viewContext
+//                          let myPersistentStoreCoordinator = appDelegate.persistentContainer.persistentStoreCoordinator
+//
+//                            let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "NoteRecord")
+//                            let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+//            
+//                            do {
+//                                try myPersistentStoreCoordinator.execute(deleteRequest, with: context)
+//                            } catch {}
+//            }
         }
         /*guard let url =  URL(string: (urlString + endpoint)) else {return}
         //try make get request

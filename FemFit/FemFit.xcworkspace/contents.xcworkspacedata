@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/leila/Documents/FemFit/FemFit/FemFit/NoteRecord+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/leila/Documents/FemFit/FemFit/FemFit/NoteRecord+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:FemFit.xcodeproj">
    </FileRef>
    <FileRef

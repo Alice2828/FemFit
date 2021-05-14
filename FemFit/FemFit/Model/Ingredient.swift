@@ -1,4 +1,4 @@
-//
+
 //  Meal.swift
 //  FemFitDraft
 //
@@ -25,6 +25,68 @@ struct Ingredient: Codable {
     let license: Int?
     let license_author: String?
     let language: Int?
+}
+
+public class IngredientCore: NSObject, Codable, NSCoding {
+    var id: Int = 0
+    var name: String = ""
+    var energy: Int = 0
+    var gramms: Int = 0
+    
+    enum Key:String {
+        case id = "id"
+        case name = "name"
+        case energy = "energy"
+        case gramms = "gramms"
+    }
+    
+    init(id: Int, name: String, energy: Int, gramms: Int) {
+        self.id = id
+        self.name = name
+        self.energy = energy
+        self.gramms = gramms
+    }
+    
+    public override init() {
+        super.init()
+    }
+    
+    public func encode(with aCoder: NSCoder) {
+        
+        aCoder.encode(id, forKey: Key.id.rawValue)
+        aCoder.encode(name, forKey: Key.name.rawValue)
+        aCoder.encode(energy, forKey: Key.energy.rawValue)
+        aCoder.encode(gramms, forKey: Key.gramms.rawValue)
+    }
+    
+    public required convenience init?(coder aDecoder: NSCoder) {
+        
+        let mId = aDecoder.decodeInt32(forKey: Key.id.rawValue)
+        let mName = aDecoder.decodeObject(forKey: Key.name.rawValue) as! String
+        let mEnergy = aDecoder.decodeInt32(forKey: Key.energy.rawValue)
+        let mGramms = aDecoder.decodeInt32(forKey: Key.gramms.rawValue)
+        
+        self.init(id: Int(mId), name:
+            mName, energy:Int(mEnergy),gramms:Int(mGramms))
+    }
+}
+public class Ingredients: NSObject, NSCoding{
+    public var  ingredients:[IngredientCore] = []
+    enum Key: String{
+        case  ingredients   = "ingredients"
+    }
+    init(ingredients:[IngredientCore]){
+        self.ingredients = ingredients
+    }
+    public func encode(with aCoder: NSCoder) {
+        aCoder.encode(ingredients, forKey: Key.ingredients.rawValue)
+    }
+    
+    public required convenience init?(coder aDecoder: NSCoder) {
+        let mIngredients = aDecoder.decodeObject(forKey: Key.ingredients.rawValue) as! [IngredientCore]
+        
+        self.init(ingredients: mIngredients)
+    }
 }
 struct IngredientsResponse:Codable{
     var count: Int?
@@ -55,3 +117,4 @@ class Note: Codable{
         }
     }
 }
+

@@ -56,6 +56,7 @@ class ExercisesCell: UITableViewCell {
         authorLabel.layer.masksToBounds = true
         authorLabel.layer.cornerRadius = 10
        // exerciseImage.layer.cornerRadius = 10
+        cellView.layer.masksToBounds = true
         cellView.layer.cornerRadius = 10
         
         // Initialization code

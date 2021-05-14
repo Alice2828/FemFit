@@ -37,7 +37,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="21.03" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3O-z8-JSz">
-                                <rect key="frame" x="8" y="53" width="38" height="18"/>
+                                <rect key="frame" x="8" y="53" width="99" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -55,7 +55,7 @@
                 <outlet property="cellView" destination="pQO-bv-zBP" id="yqg-xT-KNW"/>
                 <outlet property="dateLabel" destination="T3O-z8-JSz" id="Ivt-Ht-Ja2"/>
             </connections>
-            <point key="canvasLocation" x="138" y="119"/>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </tableViewCell>
     </objects>
     <resources>

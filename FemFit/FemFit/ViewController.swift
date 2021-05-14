@@ -6,13 +6,24 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var logInBtn: UIButton!
     @IBOutlet weak var loginTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        animateVC()
+        let emailY = loginTF.center.y
+        let emailX = loginTF.center.x
+        loginTF.center = CGPoint(x: 0, y: emailY)
+//        UIView.animate(withDuration: 1, animations: {
+//            self.loginTF.center = CGPoint(x: emailX, y: emailY)
+//        })
         // Do any additional setup after loading the view, typically from a nib.
         let tap = UITapGestureRecognizer(target: self, action: #selector(goToRegisterPage))
         goToRegister.addGestureRecognizer(tap)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        
     }
+    
     
     @IBOutlet weak var goToRegister: UILabel!
     
@@ -55,5 +66,14 @@ class ViewController: UIViewController {
     
     @objc func goToRegisterPage(){
         performSegue(withIdentifier: "toRegister", sender: Any?.self)
+    }
+    func animateVC(){
+        print("hey")
+        let emailY = loginTF.center.y
+        let emailX = loginTF.center.x
+        loginTF.center = CGPoint(x: emailX-350, y: emailY)
+        UIView.animate(withDuration: 1, animations: {
+            self.loginTF.center = CGPoint(x: emailX, y: emailY)
+        })
     }
 }

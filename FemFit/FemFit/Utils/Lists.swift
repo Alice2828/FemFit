@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseAuth
 
+
 var exercisesList = [Exercise]()
  var mealsList = [Ingredient]()
  var currentUser: User?

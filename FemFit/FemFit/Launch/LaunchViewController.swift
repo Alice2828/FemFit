@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 
 class LaunchViewController: UIViewController {
-
+    
     @IBOutlet weak var GetStertedBtn: UIButton!
     @IBOutlet weak var SlidingRect: UIView!
     @IBOutlet weak var Rect1: UIView!
@@ -21,18 +21,21 @@ class LaunchViewController: UIViewController {
     @IBOutlet weak var WelcomeLabel: UILabel!
     var timesSwiped = 0
     
-    override func viewDidAppear(_ animated: Bool) {
-        currentUser = Auth.auth().currentUser
-        if currentUser != nil && currentUser!.isEmailVerified{
-            self.performSegue(withIdentifier: "toMain", sender: Any?.self)
-        }
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        //check if logged in
+        currentUser = Auth.auth().currentUser
+        if currentUser != nil && currentUser!.isEmailVerified{
+            self.view.alpha = 0
+            self.performSegue(withIdentifier: "toMain", sender: Any?.self)
+            
+        }
+        
+        navigationController?.setNavigationBarHidden(true, animated: true)
         self.navigationController?.navigationBar.alpha = 0
         navigationController?.navigationBar.barTintColor = UIColor(named: "NavBarColor")
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
-
+        
         Rect1.layer.cornerRadius = 5
         Rect2.layer.cornerRadius = 5
         Rect3.layer.cornerRadius = 5
@@ -44,7 +47,12 @@ class LaunchViewController: UIViewController {
         leftSwipe.direction = UISwipeGestureRecognizer.Direction.left
         self.view.addGestureRecognizer(leftSwipe)
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMain"{
+            let destination = segue.destination as! TabBarViewController
+            destination.launchView = self.view
+        }
+    }
     @objc func handleSwipes(_ sender: UISwipeGestureRecognizer)
     {
         timesSwiped += 1
